@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Countdown Timer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-800 transition duration-300" id="body">
+
+ 
+  <header class="text-center py-6 bg-blue-500 text-white shadow-md">
+    <h1 class="text-3xl font-bold">Custom Countdown Timer</h1>
+  </header>
+
+  <main class="max-w-xl mx-auto p-6 space-y-6">
+
+    <section class="bg-white rounded-lg shadow p-6 space-y-4">
+      <label class="block text-lg font-semibold">Select Target Date & Time:</label>
+      <input type="datetime-local" id="targetDate" class="w-full p-2 border border-gray-300 rounded" />
+
+      <label class="block font-semibold">Choose Theme:</label>
+      <select id="themeSelect" class="w-full p-2 border rounded">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+
+      <button onclick="startCountdown()" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">Start Countdown</button>
+    </section>
+
+    <section id="countdownDisplay" class="text-center text-2xl font-semibold"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
